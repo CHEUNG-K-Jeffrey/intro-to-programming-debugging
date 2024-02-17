@@ -25,6 +25,10 @@ function getRandomNumber(min, max) {
 function checkGuess() {
   // Get value from guess input element
   const guess = parseInt(guessInput.value, 10);
+  // Check if guess is within bounds
+  if (guess < 1 || guess >= 100) {
+    return;
+  }
   attempts = attempts + 1;
 
   hideAllMessages();
